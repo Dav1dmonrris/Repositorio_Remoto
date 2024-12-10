@@ -38,14 +38,14 @@ integral_indefinidaNy = sp.integrate(N, y)
 if derivadaM==derivadaN:
     
     print("Es una EDO Exacta")
-    suma=integral_indefinidaMx + integral_indefinidaNy -Integral_derivada_de_la_integral_indefinida
-    print(F"El resultado de la Ecuacion Diferencial es: {suma}")
+
 
 else:
     print("No es Exacta")
 
 
-
+    suma=integral_indefinidaMx + integral_indefinidaNy -Integral_derivada_de_la_integral_indefinida
+    print(F"El resultado de la Ecuacion Diferencial es: {suma}")
 
 
 
