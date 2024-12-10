@@ -1,68 +1,52 @@
-import tkinter as tk
-from tkinter import messagebox
+
 import sympy as sp
 
-# Función para calcular la derivada
-def calcular_derivada():
-    try:
-        # Obtener la expresión de la función
-        funcion = entrada_funcion.get()
-        
-        # Definir la variable simbólica
-        x = sp.symbols('x')
-        
-        # Convertir la cadena de texto a una expresión simbólica
-        f = sp.sympify(funcion)
-        
-        # Calcular la derivada
-        derivada = sp.diff(f, x)
-        
-        # Mostrar el resultado
-        resultado_var.set(f"Derivada: {derivada}")
-    except Exception as e:
-        messagebox.showerror("Error", f"Hubo un error: {e}")
+#ED Exactas
+# Definir la variable simbólica
+x = sp.symbols('x')
+y = sp.symbols('y')
 
-# Función para calcular la integral
-def calcular_integral():
-    try:
-        # Obtener la expresión de la función
-        funcion = entrada_funcion.get()
-        
-        # Definir la variable simbólica
-        x = sp.symbols('x')
-        
-        # Convertir la cadena de texto a una expresión simbólica
-        f = sp.sympify(funcion)
-        
-        # Calcular la integral
-        integral = sp.integrate(f, x)
-        
-        # Mostrar el resultado
-        resultado_var.set(f"Integral: {integral}")
-    except Exception as e:
-        messagebox.showerror("Error", f"Hubo un error: {e}")
+# Definir la ecuación diferencial: 
+M = input("Escribe la ecuacion M: ")
+N = input("Escribe la ecuacion N: ") 
 
-# Crear la ventana principal
-ventana = tk.Tk()
-ventana.title("Calculadora Simbólica")
+#M = 2*x*y**2 + y**6 
+#N = 3*x**2*y**2 + 6*x*y**5
 
-# Crear los widgets (etiquetas, entradas, botones)
-label_funcion = tk.Label(ventana, text="Ingrese la función:")
-label_funcion.pack()
+# Calcular la derivada de M(x,y) con respecto a y
+derivadaM = sp.diff(M, y)
+# Calcular la derivada de N(x,y) con respecto a X
+derivadaN = sp.diff(N, x)
 
-entrada_funcion = tk.Entry(ventana, width=30)
-entrada_funcion.pack()
+# Calcular la integral indefinida de Mx(x,y)
+integral_indefinidaMx = sp.integrate(M, x)
+# Calcular derivada de la integral indefinida anterior respecto y
+DerivadaIIndefinida= sp.diff(integral_indefinidaMx, y)
 
-boton_derivada = tk.Button(ventana, text="Calcular Derivada", command=calcular_derivada)
-boton_derivada.pack()
+Integral_derivada_de_la_integral_indefinida = sp.integrate(DerivadaIIndefinida,y)
 
-boton_integral = tk.Button(ventana, text="Calcular Integral", command=calcular_integral)
-boton_integral.pack()
+# Mostrar la derivada
+#print( F"La derivada de f(x) = x^2 + 3*x + 5 con respecto a x es: {derivadaM}") 
+#print( F"La derivada de f(x) = x^2 + 3*x + 5 con respecto a x es: {derivadaN}")
 
-# Etiqueta para mostrar el resultado
-resultado_var = tk.StringVar()
-label_resultado = tk.Label(ventana, textvariable=resultado_var)
-label_resultado.pack()
+#print( F"La derivada de f(x) = x^2 + 3*x + 5 con respecto a x es: {integral_indefinidaMx}")
+#print( F"La derivada de f(x) = x^2 + 3*x + 5 con respecto a x es: {DerivadaIIndefinida}")
 
-# Iniciar la interfaz gráfica
-ventana.mainloop()
+#Integral indefinida de Ny(x,y)
+integral_indefinidaNy = sp.integrate(N, y)
+
+if derivadaM==derivadaN:
+    
+    print("Es una EDO Exacta")
+    suma=integral_indefinidaMx + integral_indefinidaNy -Integral_derivada_de_la_integral_indefinida
+    print(F"El resultado de la Ecuacion Diferencial es: {suma}")
+
+else:
+    print("No es Exacta")
+
+
+
+
+
+
+
