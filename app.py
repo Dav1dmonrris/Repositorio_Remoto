@@ -1,4 +1,4 @@
-
+#Importar librerias 
 import sympy as sp
 
 #ED Exactas
@@ -47,6 +47,7 @@ else:
     suma=integral_indefinidaMx + integral_indefinidaNy -Integral_derivada_de_la_integral_indefinida
     print(F"El resultado de la Ecuacion Diferencial es: {suma}")
 
+#euirgfnjksofpjvrlkenipgj32pivwdnknplknvnneqspvñinñneqvccccc
 
 
 
