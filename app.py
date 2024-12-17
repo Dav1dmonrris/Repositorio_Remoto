@@ -47,6 +47,8 @@ else:
     suma=integral_indefinidaMx + integral_indefinidaNy -Integral_derivada_de_la_integral_indefinida
     print(F"El resultado de la Ecuacion Diferencial es: {suma}")
 
+""" Esto es un comentario multilinea, :v """    
+
 #euirgfnjksofpjvrlkenipgj32pivwdnknplknvnneqspvñinñneqvccccc
 
 
