@@ -50,6 +50,7 @@ else:
 """ Esto es un comentario multilinea, :v """    
 
 #ED Lineales
+#Eso brad
 # NO PAPU, AYUDAME GFCITA :'v
 
 
