@@ -49,7 +49,8 @@ else:
 
 """ Esto es un comentario multilinea, :v """    
 
-#euirgfnjksofpjvrlkenipgj32pivwdnknplknvnneqspvñinñneqvccccc
+#ED Lineales
+# NO PAPU, AYUDAME GFCITA :'v
 
 
 
