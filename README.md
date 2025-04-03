@@ -10,7 +10,11 @@
 
 ## 3-Generar claves SSH:
     ssh-keygen -t ed25519 -C "tu_email@github.com"
-### Agregar claves a tu ordenador:
+## 4-Activa el SSH Agent:
+    eval "$(ssh-agent -s)"
+### sino funciona: 
+    exec ssh-agent bash
+### Agregar claves al SSH agent:
     ssh-add ~/.ssh/id_ed25519
 ### Mostrar clave publica:
     cat ~/.ssh/id_ed25519.pub
