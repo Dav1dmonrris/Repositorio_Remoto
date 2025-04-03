@@ -1,4 +1,4 @@
-##  Manipular un repositorio remotamente
+#  - - - Manipular un repositorio remotamente- - -
 ## 1- Configurar git:
     git config --global user.name "Usuario"
     git config --global user.email "tu@email.com"
@@ -19,4 +19,10 @@
 #### Mostrar clave publica:
     cat ~/.ssh/id_ed25519.pub
 ## 4- Agregar clave a tu perfil Github y listo.
+
+# - - - Comandos para el Agente SSH- - -
+
+## Mostrar claves en el agente:
+    ssh-add -L
+
    
