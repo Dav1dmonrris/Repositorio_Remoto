@@ -21,6 +21,13 @@
 ## 4- Agregar clave a tu perfil Github y listo.
 
 # - - - Comandos para el Agente SSH- - -
+## Para SHELL:
+- **-c** : Genera comandos para C-Shell
+- **-s** : Genera comandos para Bourne Shell
+- **-k** : Elimina el Agente SSH actual
+- **-D** : Ejecuta ssh-agent en modo foreground
+- **-t 3600** : Establece el tiempo máximo de vida para las claves cargadas
+- **-s** : Genera comandos para Bourne Shell
 
 ## Mostrar claves en el agente:
     ssh-add -L
