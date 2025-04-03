@@ -32,4 +32,7 @@
 ## Mostrar claves del agente:
     ssh-add -L
 
-   
+# - - - Git - - -
+## Mover entre ramas
+    git fetch origin #Actializa el repositorio
+    git checkout Nombre_Rama
