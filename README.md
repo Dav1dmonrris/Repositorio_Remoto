@@ -14,5 +14,5 @@
     ssh-add ~/.ssh/id_ed25519
 ### Mostrar clave publica:
     cat ~/.ssh/id_ed25519.pub
-### Agregar clave a tu perfil Github
+### Agregar clave a tu perfil Github y listo.
    
