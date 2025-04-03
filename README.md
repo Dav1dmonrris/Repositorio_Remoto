@@ -12,7 +12,7 @@
     ssh-keygen -t ed25519 -C "tu_email@github.com"
 ## 4-Activa el SSH Agent:
     eval "$(ssh-agent -s)"
-### sino funciona: 
+#### sino funcionó, pueba con:
     exec ssh-agent bash
 ### Agregar claves al SSH agent:
     ssh-add ~/.ssh/id_ed25519
