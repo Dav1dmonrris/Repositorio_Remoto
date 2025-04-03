@@ -29,7 +29,7 @@
 - **-t 3600** : Establece el tiempo máximo de vida para las claves cargadas
 - **-s** : Genera comandos para Bourne Shell
 
-## Mostrar claves en el agente:
+## Mostrar claves del agente:
     ssh-add -L
 
    
